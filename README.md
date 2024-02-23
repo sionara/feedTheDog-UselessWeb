@@ -8,4 +8,4 @@
     - HTML/CSS
 
   ## Website URL
-  [githubpages](https://sionara.github.io/feedTheDog-UselessWeb/)
+  [Website Link](https://sionara.github.io/feedTheDog-UselessWeb/)
