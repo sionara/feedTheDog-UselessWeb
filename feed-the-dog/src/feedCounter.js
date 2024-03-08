@@ -1,9 +1,13 @@
-export default function FeedCounter(){
+function FeedCounter(){
   return (
     <>
       <p>Feed Counter: {getAmountFed}</p>
     </>
   );
+}
+
+function foodDropped(event) {
+  event.dataTransfer.setData('')
 }
 
 function getAmountFed(){
@@ -13,4 +17,8 @@ function getAmountFed(){
   }
 
   return counter
+}
+
+export {
+  
 }

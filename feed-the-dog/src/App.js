@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import FeedCounter from "./feedCounter";
+import Status from "./status";
 
-function App() {
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Feed The Dog</h1>
+      <FeedCounter>
+        0
+      </FeedCounter>
+      <Status>
+        Hungry
+      </Status>
+        <p>Drag the food to feed the dog!</p>
+        <img 
+          src= {"public/images/hungry.jpg"}
+          alt= {"Photo of a hungry dog"}
+        />
+        <img
+          className="food"
+          src={"./public/images/dog-food.png"}
+          alt={'Photo of dog food'}
+        />
+    </>
   );
 }
-
-export default App;
