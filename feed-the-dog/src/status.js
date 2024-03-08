@@ -1,15 +1,18 @@
-export default function Status() {
+export const Status = ({feedCounter}) => {
+  
+  function showStatus() {
+    if (feedCounter < 5) {
+      return "Hungry"
+    } else {
+      
+      return "Full"
+    }
+  }  
+  
   return (
     <>
-      <p className="status">Status: {showStatus} </p>
+      <p className="status">Status: {showStatus()} </p>
     </>
   )
 }
 
-function showStatus(feedAmount) {
-  if (feedAmount < 10) {
-    return "Hungry"
-  } else {
-    return "Full"
-  }
-}
