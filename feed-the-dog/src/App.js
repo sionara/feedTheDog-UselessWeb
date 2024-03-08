@@ -1,6 +1,8 @@
-import FeedCounter from "./feedCounter";
+import {FeedCounter} from "./feedCounter";
 import Status from "./status";
-
+// import images from public
+import hungryDog from "./images/hungry.jpg";
+import dogFood from "./images/dog-food.png";
 
 export default function App() {
 
@@ -15,13 +17,14 @@ export default function App() {
       </Status>
         <p>Drag the food to feed the dog!</p>
         <img 
-          src= {"public/images/hungry.jpg"}
-          alt= {"Photo of a hungry dog"}
+          src= {hungryDog }
+          alt= {"Hungry dog"}
+          style={{width: "300px"}}
         />
         <img
           className="food"
-          src={"./public/images/dog-food.png"}
-          alt={'Photo of dog food'}
+          src={dogFood}
+          alt={'Dog food'}
         />
     </>
   );
