@@ -1,9 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
-import {Status} from "./status";
+import {Status} from "./components/status";
 // import images from public
 import hungryDog from "./images/hungry.jpg";
 import dogFood from "./images/dog-food.png";
 import fullDog from "./images/full.jpg";
+
+import "./App.css";
+
+//mui styling
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
 
 export default function App() {
 
@@ -36,34 +43,56 @@ export default function App() {
   }, [feedCounter]); 
   
   return (
+    // fragmet tag
     <>
-      <h1>Feed The Dog</h1>
-      <div>
-        Feed Counter: {feedCounter}
-      </div>
-      <Status feedCounter = {feedCounter}>
-      </Status>
-        <p>Drag the food to feed the dog!</p>
-        <img 
-          src= {hungryDog}
-          alt= {"Hungry dog"}
-          style={isFull ? fullDogStyle : {width: "300px"}}
-          onDragOver={handleDragOver}
-          onDrop={handleDrop}
-          draggable = {false} // prevent dragging onto itself
-        />
-        <img 
-          src = {fullDog}
-          alt = {"Dog who is full"}
-          style={isFull ? {display: "block", width: "300px"} : fullDogStyle }
-         /> 
-        <img
-          className="food"
-          src={dogFood}
-          alt={'Dog food'}
-          // onDrop={handleDrop}
-          draggable = {true}
-        />
+      <CssBaseline>
+        <Container>
+          <h1>Feed The Dog</h1>
+            
+          <div className="dog-info">
+            Feed Counter: {feedCounter}
+            <Status feedCounter = {feedCounter} />
+          </div>
+         
+          
+          <p>Instructions:
+            Drag the food to feed the dog!</p>
+          
+          { /* main content */}
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={4}>
+              <img 
+                src= {hungryDog}
+                alt= {"Hungry dog"}
+                style={isFull ? fullDogStyle : {width: "300px"}}
+                onDragOver={handleDragOver}
+                onDrop={handleDrop}
+                draggable = {false} // prevent dragging onto itself
+              />
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <img 
+                src = {fullDog}
+                alt = {"Dog who is full"}
+                style={isFull ? {display: "block", width: "300px"} : fullDogStyle }
+              /> 
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <img
+                className="food"
+                src={dogFood}
+                alt={'Dog food'}
+                // onDrop={handleDrop}
+                draggable = {true}
+                style={isFull ? fullDogStyle : {width: "300px"}}
+              />
+            </Grid>
+          </Grid>
+
+        </Container>
+      </CssBaseline> 
+      
     </>
   );
 }

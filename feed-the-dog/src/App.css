@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  color: green;
+}
+
+.dog-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.status {
+  color: orange;
+}
