@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/feedTheDog-UselessWeb/static/css/main.da761d30.css",
+    "main.js": "/feedTheDog-UselessWeb/static/js/main.212e6c18.js",
+    "static/js/488.b2694cf1.chunk.js": "/feedTheDog-UselessWeb/static/js/488.b2694cf1.chunk.js",
+    "static/media/full.jpg": "/feedTheDog-UselessWeb/static/media/full.25e7e60711b4a7ba81ed.jpg",
+    "static/media/hungry.jpg": "/feedTheDog-UselessWeb/static/media/hungry.caa4a5e4d9839fdf7101.jpg",
+    "static/media/dog-food.png": "/feedTheDog-UselessWeb/static/media/dog-food.761d115492a88cf8002d.png",
+    "index.html": "/feedTheDog-UselessWeb/index.html",
+    "main.da761d30.css.map": "/feedTheDog-UselessWeb/static/css/main.da761d30.css.map",
+    "main.212e6c18.js.map": "/feedTheDog-UselessWeb/static/js/main.212e6c18.js.map",
+    "488.b2694cf1.chunk.js.map": "/feedTheDog-UselessWeb/static/js/488.b2694cf1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da761d30.css",
+    "static/js/main.212e6c18.js"
+  ]
+}
