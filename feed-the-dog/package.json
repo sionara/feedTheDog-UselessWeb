@@ -1,11 +1,13 @@
 {
   "name": "feed-the-dog",
   "version": "0.1.0",
+  "homepage": "https://sionara.github.io/feedTheDog-UselessWeb",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.12",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
@@ -17,6 +19,8 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
